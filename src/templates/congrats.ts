@@ -1,20 +1,19 @@
-export const CongratsAd = {
-  template: `
+export const CongratsAdConfig = (data: any)=> {
+ return {template: `
     <body class="bg-white">
         <div class="flex flex-col items-center justify-center h-screen">
 
                <p class="text-6xl text-center opacity-0 animate-textAnimation absolute" style="animation-delay: 0s;">Congratulations on your recent  <span
                   class='font-bold text-[#FF5A5F]'>booking!<span/>
               </p>
-               <p class="text-6xl text-center opacity-0 animate-textAnimation absolute" style="animation-delay: 2s;">Destination <span
-                  class='font-bold text-[#FF5A5F]'>Morocco<span/>
+               <p class="text-6xl text-center opacity-0 animate-textAnimation absolute" style="animation-delay: 2s;">Destination
               </p>
-               <p class="text-6xl text-center opacity-0 animate-textAnimation absolute" style="animation-delay: 4s;">City <span
-                  class='font-bold text-[#FF5A5F]'>Chefchaouen<span/>
+               <p class="text-6xl text-center opacity-0 animate-textAnimation absolute" style="animation-delay: 4s;"> <span
+                  class='font-bold text-[#FF5A5F]'>${data?.title}<span/>
               </p>
 
 
-              <img src="https://a0.muscache.com/im/pictures/a8a2237e-b03b-4171-b935-3353bded93e5.jpg?im_w=720"
+              <img src=${data.images[6]}
                   alt="Image 2"
                   class="w-[90%]  h-auto opacity-0 animate-textAnimation absolute rounded-xl"
                   style="animation-delay: 6s;">
@@ -68,5 +67,5 @@ export const CongratsAd = {
 
     `,
 
-  musicUrl: `https://assets.mixkit.co/music/preview/mixkit-raising-me-higher-34.mp3`,
+  musicUrl: `https://assets.mixkit.co/music/preview/mixkit-raising-me-higher-34.mp3`,}
 };

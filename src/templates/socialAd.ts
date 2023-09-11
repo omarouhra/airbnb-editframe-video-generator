@@ -1,9 +1,9 @@
-export const SocialAd = {
-  template: `
+export const SocialAdConfig = (data:any)=> {
+  return{template: `
    <body class="bg-white">
       <div class="flex flex-col items-center justify-center h-screen">
         <div class="relative w-full h-screen overflow-hidden flex items-center justify-center">
-          <img src="https://a0.muscache.com/im/pictures/0110b562-dd0c-4557-9ad8-54c5e152f390.jpg?im_w=1200"
+          <img src=${data.images[6]}
               alt="Image 1"
               class="w-full h-screen object-cover animate-imageAnimation absolute opacity-0"
               style="animation-delay: 0s;">
@@ -23,15 +23,15 @@ export const SocialAd = {
 
            <div class="flex h-screen w-full flex-col justify-center space-y-2 p-2 absolute">
 
-           <img src="https://a0.muscache.com/im/pictures/a8a2237e-b03b-4171-b935-3353bded93e5.jpg?im_w=720"
+           <img src=${data.images[7]}
               alt="Image 1"
               class="w-full h-1/3 object-cover animate-fadeIn rounded-md opacity-0"
               style="animation-delay: 4s;">
-           <img src="https://a0.muscache.com/im/pictures/86aaa46a-8058-4bbb-abba-4e21f677d701.jpg?im_w=720"
+           <img src=${data.images[8]}
               alt="Image 1"
               class="w-full h-1/3 object-cover animate-fadeIn rounded-md opacity-0"
               style="animation-delay: 5s;">
-           <img src="https://a0.muscache.com/im/pictures/8f10adb7-ec35-4276-a476-4d55ed02d9db.jpg?im_w=720"
+           <img src=${data.images[9]}
               alt="Image 1"
               class="w-full h-1/3 object-cover animate-fadeIn rounded-md opacity-0"
               style="animation-delay: 6s;">
@@ -110,5 +110,5 @@ export const SocialAd = {
 
     `,
 
-  musicUrl: `https://assets.mixkit.co/music/preview/mixkit-life-is-a-dream-837.mp3`,
+  musicUrl: `https://assets.mixkit.co/music/preview/mixkit-life-is-a-dream-837.mp3`,}
 };

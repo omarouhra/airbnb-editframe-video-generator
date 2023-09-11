@@ -4,13 +4,14 @@ import "./App.css";
 import AirbnbIcon from "./icons/AirbnbIcon";
 import PlayIcon from "./icons/PlayIcon";
 
-import { SocialAd } from "./templates/socialAd";
+import { SocialAdConfig } from "./templates/socialAd";
 import axios from "axios";
 import cheerio from "cheerio";
-import { CongratsAd } from "./templates/congrats";
+
 import SettingsModal from "./components/SettingsModal";
 import SettingIcon from "./icons/SettingIcon";
 import { listingAdConfig } from "./templates/listingAd";
+import { CongratsAdConfig } from "./templates/congrats";
 
 function App() {
   const [videoType, setVideoType] = useState<string>("ad");
@@ -71,8 +72,8 @@ function App() {
     videoType === "ad"
       ? listingAdConfig(data)
       : videoType === "social"
-      ? SocialAd
-      : CongratsAd;
+      ? SocialAdConfig(data)
+      : CongratsAdConfig(data);
 
   const mobileConfig = {
     layers: [
@@ -237,7 +238,7 @@ function App() {
             </p>
           </div>
           <p className="font-light text-center">
-           <span className="font-bold">Effortlessly</span> Transform Listings into Stunning Videos, Ready to Share!
+           <span className="font-bold">Effortlessly</span> Transform Airbnb Listings into Stunning Videos, Ready to Share!
           </p>
           <div className="w-full mt-8">
             <form

@@ -23,8 +23,7 @@ function App() {
   const [isLoading, setIsLoading] = useState<boolean>(false);
 
   async function scrapeWithScrapingBee() {
-    const API_KEY =
-      "BCVV56UBVI0P3L2VH03X135SW2D6Z8CFU9RBDX9C09LCL6XPCCK84EDE5A8S8L3OK1DM9QP21CQXFTD1";
+    const API_KEY = process.env.API_KEY;
     try {
       const response = await axios.get(
         `https://app.scrapingbee.com/api/v1/?api_key=${API_KEY}&url=${encodeURIComponent(

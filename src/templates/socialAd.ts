@@ -1,11 +1,11 @@
 export const SocialAdConfig = (data:any)=> {
   return{template: `
-   <body class="bg-white">
+   <body class="bg-white @container">
       <div class="flex flex-col items-center justify-center h-screen">
-        <div class="relative w-full h-screen overflow-hidden flex items-center justify-center">
-          <img src=${data.images[6]}
+        <div class="relative w-full h-screen overflow-hidden flex items-center justify-center ">
+          <img src=${data.images[6] ?? data?.images[0]}
               alt="Image 1"
-              class="w-full h-screen object-cover animate-imageAnimation absolute opacity-0"
+              class="w-full h-screen object-contain animate-imageAnimation absolute opacity-0 rounded-md"
               style="animation-delay: 0s;">
           </div>
 
@@ -21,19 +21,19 @@ export const SocialAdConfig = (data:any)=> {
            </div>
 
 
-           <div class="flex h-screen w-full flex-col justify-center space-y-2 p-2 absolute">
+           <div class="flex h-screen w-full flex-col justify-center space-y-2 p-2 absolute ">
 
-           <img src=${data.images[7]}
+           <img src=${data.images[7] ?? data?.images[1]}
               alt="Image 1"
-              class="w-full h-1/3 object-cover animate-fadeIn rounded-md opacity-0"
+              class="w-full h-1/3  animate-fadeIn rounded-md opacity-0"
               style="animation-delay: 4s;">
-           <img src=${data.images[8]}
+           <img src=${data.images[8] ?? data?.images[2]}
               alt="Image 1"
-              class="w-full h-1/3 object-cover animate-fadeIn rounded-md opacity-0"
+              class="w-full h-1/3  animate-fadeIn rounded-md opacity-0"
               style="animation-delay: 5s;">
-           <img src=${data.images[9]}
+           <img src=${data.images[9] ?? data?.images[3]}
               alt="Image 1"
-              class="w-full h-1/3 object-cover animate-fadeIn rounded-md opacity-0"
+              class="w-full h-1/3  animate-fadeIn rounded-md opacity-0"
               style="animation-delay: 6s;">
             </div>
 
@@ -48,8 +48,6 @@ export const SocialAdConfig = (data:any)=> {
                </svg>
 
           </div>
-
-
 
         </div>
 </body>

@@ -13,9 +13,9 @@ export const CongratsAdConfig = (data: any)=> {
               </p>
 
 
-              <img src=${data.images[6]}
+              <img src=${data.images[6] ?? data?.images[0]}
                   alt="Image 2"
-                  class="w-[90%]  h-auto opacity-0 animate-textAnimation absolute rounded-xl"
+                  class="w-[90%] object-cover  h-[90%] opacity-0 animate-textAnimation absolute rounded-xl"
                   style="animation-delay: 6s;">
 
 

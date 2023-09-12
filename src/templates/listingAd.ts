@@ -4,28 +4,28 @@ export const listingAdConfig = (data: any) => {
     <body class="bg-white">
         <div class="flex flex-col items-center justify-center h-screen py-12">
             <div class="relative flex items-center justify-center w-[90%] h-auto">
-              <img src=${data?.images[6]}
+              <img src=${data?.images[6] ?? data?.images[0]}
                   alt="Image 1"
-                  class="w-full lg:w-[800px] object-contain h-auto opacity-0 animate-images absolute rounded-xl "
+                  class="w-full lg:w-[800px] object-cover h-[900px] opacity-0 animate-images absolute rounded-xl "
                   style="animation-delay: 0s;">
-              <img src=${data?.images[7]}
+              <img src=${data?.images[7] ?? data?.images[1]}
                           alt="Image 2"
-                  class="w-full lg:w-[800px] object-contain h-auto opacity-0 animate-images absolute rounded-xl"
+                  class="w-full lg:w-[800px] object-contain h-[900px] opacity-0 animate-images absolute rounded-xl"
                           style="animation-delay: 2s;">
-               <img src=${data?.images[8]}
+               <img src=${data?.images[8] ?? data?.images[2]}
                   alt="Image 2"
-                  class="w-full lg:w-[800px] object-contain h-auto opacity-0 animate-images absolute rounded-xl"
+                  class="w-full lg:w-[800px] object-contain h-[900px] opacity-0 animate-images absolute rounded-xl"
                   style="animation-delay: 4s;">
-               <img src=${data?.images[9]}
+               <img src=${data?.images[9] ?? data?.images[3]}
                   alt="Image 2"
-                  class="w-full lg:w-[800px] object-contain h-auto opacity-0 animate-images absolute rounded-xl"
+                  class="w-full lg:w-[800px] object-contain h-[900px] opacity-0 animate-images absolute rounded-xl"
                   style="animation-delay: 6s;">
             </div>
 
 
-               <p class="text-5xl text-center opacity-0 animate-textAnimation" style="animation-delay: 8s;">Welcome to
+               <p class="text-6xl text-center opacity-0 animate-textAnimation" style="animation-delay: 8s;">Welcome to
               </p>
-               <p class="text-5xl text-[#FF5A5F] text-center opacity-0 animate-textAnimation mt-6 font-semibold" style="animation-delay: 8s;"> ${data?.title}
+               <p class="text-6xl text-[#FF5A5F] text-center opacity-0 animate-textAnimation mt-6 font-semibold" style="animation-delay: 8s;"> ${data?.title}
               </p>
 
               <div class='animate-textAnimation opacity-0 absolute bg-white h-screen w-full flex items-center justify-center'
